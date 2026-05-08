@@ -1,49 +1,50 @@
 # 🎵 PlaylistBridge
 
-Import YouTube playlists directly into Spotify, automatically — no installation needed, no backend, runs entirely in the browser.
+Importe playlists do YouTube direto para o Spotify, automaticamente — sem precisar instalar nada, sem backend, direto no navegador.
 
-## How it works
+## Como funciona
 
-1. Paste a YouTube playlist link
-2. The app fetches the tracks via YouTube Data API v3
-3. Log in to Spotify via OAuth 2.0 (PKCE)
-4. The app searches for each track on Spotify and creates the playlist automatically
+1. Você cola o link de uma playlist do YouTube
+2. O app busca as músicas via YouTube Data API v3
+3. Você faz login no Spotify via OAuth 2.0 (PKCE)
+4. O app pesquisa cada música no Spotify e cria a playlist automaticamente
 
-## Requirements
+## Pré-requisitos
 
-You'll need two free API keys:
+Você vai precisar de duas chaves de API gratuitas:
 
 **YouTube Data API v3**
-- Go to [Google Cloud Console](https://console.cloud.google.com)
-- Enable the YouTube Data API v3
-- Create an API key
+- Acesse o [Google Cloud Console](https://console.cloud.google.com)
+- Ative a YouTube Data API v3
+- Crie uma chave de API
 
 **Spotify Web API**
-- Go to [Spotify for Developers](https://developer.spotify.com/dashboard)
-- Create a new app
-- Under Settings, check **Web API** in "Which API/SDKs are you planning to use?"
-- Add `http://127.0.0.1:5500/yt-to-spotify.html` as a Redirect URI
-- Copy the Client ID
-- Under User Management, add your Spotify account email as an authorized user
+- Acesse o [Spotify for Developers](https://developer.spotify.com/dashboard)
+- Crie um novo app
+- Em Settings, marque **Web API** em "Which API/SDKs are you planning to use?"
+- Adicione `http://127.0.0.1:5500/yt-to-spotify.html` como Redirect URI
+- Copie o Client ID
+- Em User Management, adicione o email da sua conta Spotify como usuário autorizado
 
-## Usage
+## Como usar
 
-1. Open `yt-to-spotify.html` in the browser (recommended: via Live Server in VS Code on port 5500)
-2. Enter your API keys and click **Save configuration**
-3. Click **Sign in with Spotify** and authorize the app
-4. Paste your YouTube playlist URL and click **Analyze playlist**
-5. Click **Create on Spotify**
+1. Abra o arquivo `yt-to-spotify.html` no navegador (recomendado: via Live Server no VS Code na porta 5500)
+2. Cole as chaves de API nos campos e clique em **Salvar configuração**
+3. Clique em **Entrar com Spotify** e autorize o app
+4. Cole o link da playlist do YouTube e clique em **Analisar playlist**
+5. Clique em **Criar no Spotify**
 
-## Notes
+## Observações
 
-- API keys are saved only in your browser's `localStorage` — nothing is sent to external servers
-- The app runs in Spotify's development mode, so it only works for accounts registered under User Management (up to 5 users)
-- Tracks not found on Spotify will be marked as "not found" and skipped
-- Matching is done by channel name + video title, with a title-only fallback
+- As chaves de API ficam salvas apenas no `localStorage` do seu navegador — nada é enviado a servidores externos
+- O app está em modo de desenvolvimento do Spotify, então só funciona para contas cadastradas em User Management (até 5 usuários)
+- Músicas que não forem encontradas no Spotify serão marcadas como "não encontradas" e puladas
+- O matching é feito por nome do canal + título do vídeo, com fallback só pelo título
 
 ## Stack
 
-Pure HTML + CSS + JavaScript — no dependencies, no build step.
+HTML + CSS + JavaScript puro, sem dependências externas ou build step.
 
+## Autor
 
-built with AI assistance from [Claude](https://claude.ai) by Anthropic
+Pedro Henrique Leonel Marques — desenvolvido com auxílio de IA ([Claude](https://claude.ai) da Anthropic)
