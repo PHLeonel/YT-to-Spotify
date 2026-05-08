@@ -44,6 +44,3 @@ Você vai precisar de duas chaves de API gratuitas:
 ## Stack
 
 HTML + CSS + JavaScript puro, sem dependências externas ou build step.
-
-
-desenvolvido com auxílio de IA ([Claude](https://claude.ai) da Anthropic)
