@@ -1,4 +1,4 @@
-# 🎵 PlaylistBridge
+# PlaylistBridge
 
 Importe playlists do YouTube direto para o Spotify, automaticamente — sem precisar instalar nada, sem backend, direto no navegador.
 
